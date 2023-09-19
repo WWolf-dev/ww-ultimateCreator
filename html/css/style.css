@@ -1,0 +1,361 @@
+@font-face {
+    font-family: "Bruno";
+    src: url("../fonts/BrunoAce-Regular.ttf");
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Bruno", sans-serif;
+    /* Utilisation de la font Bruno comme font principale */
+}
+
+#interface {
+    display: none;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 98.9375rem;
+    height: 58.5rem;
+    flex-shrink: 0;
+    border-radius: 1.25rem;
+    border-bottom: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    background-color: rgba(86, 86, 86, 0.62);
+}
+
+
+#title_interface {
+    position: absolute;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    top: 1.69rem;
+    left: 32.44rem;
+    right: 19.69rem;
+    bottom: 53.81rem;
+}
+
+#side_menu {
+    position: absolute;
+    width: 11.375rem;
+    height: 39.5625rem;
+    flex-shrink: 0;
+    border-radius: 1.25rem;
+    border-right: 2px solid #ffffff;
+    background-color: rgba(217, 217, 217, 0.00);
+
+    top: 8.19rem;
+    right: 79.56rem;
+    left: 0;
+    bottom: 10.75rem;
+
+    overflow-y: auto;
+
+    scrollbar-width: none;
+    /* Cacher la barre de défilement pour Firefox */
+    -ms-overflow-style: none;
+    /* Cacher la barre de défilement pour IE et Edge */
+}
+
+#side_menu::-webkit-scrollbar {
+    display: none;
+    /* Cacher la barre de défilement pour Chrome, Safari et les navigateurs similaires */
+}
+
+.side_category_button {
+    display: block;
+    /* Assurez-vous que chaque bouton est affiché sur une nouvelle ligne. */
+    width: 7.5625rem;
+    height: 3.9375rem;
+    flex-shrink: 0;
+    border-radius: 1.25rem;
+    border: 2px solid #ffffff;
+    background-color: rgba(217, 217, 217, 0.00);
+    box-shadow: 1px -1px 4px 0px #ffffff;
+    margin: 1.37rem auto;
+    /* Centré horizontalement et espacé de 1.37rem verticalement */
+
+    color: #FFFFFF;
+    font-family: "Bruno", sans-serif;
+    /* En utilisant la font Bruno */
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    /* Pour centrer le texte à l'intérieur du bouton */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side_category_button:first-child {
+    margin-top: 2.19rem;
+}
+
+#side_blips_button:hover {
+    cursor: pointer;
+    background: rgba(43, 43, 43, 0.8);
+    letter-spacing: 0.25rem;
+    box-shadow: 0 0 35px #fff;
+    transition: 0.7s;
+}
+
+#bottom_side_menu {
+    width: 11.375rem;
+    height: 10.75rem;
+    flex-shrink: 0;
+    border-radius: 1.25rem;
+    border-right: 2px solid #ffffff;
+    background-color: rgba(217, 217, 217, 0.00);
+
+    position: absolute;
+    right: 79.56rem;
+    bottom: 0;
+    left: 0;
+    top: 47.75rem;
+}
+
+#leave_button {
+    width: 7.5625rem;
+    height: 4.1875rem;
+    flex-shrink: 0;
+    border-radius: 1.25rem;
+    border: 2px solid #ffffff;
+    background-color: rgba(217, 217, 217, 0.00);
+
+    position: relative;
+    top: 4.44rem;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Centrer le bouton horizontalement */
+    bottom: 2.12rem;
+
+    color: #FFFFFF;
+    text-align: center;
+    font-family: "Bruno", sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#leave_button:hover {
+    cursor: pointer;
+    background: rgba(43, 43, 43, 0.8);
+    letter-spacing: 0.25rem;
+    box-shadow: 0 0 35px #fff;
+    transition: 0.7s;
+}
+
+#welcome_text {
+    width: 11.875rem;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: "Bruno", sans-serif;
+    font-size: 0.6875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    position: absolute;
+    top: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Centré horizontalement */
+    bottom: 8.69rem;
+}
+
+#group_text {
+    color: #FFFFFF;
+    text-align: center;
+    font-family: "Bruno", sans-serif;
+    font-size: 0.5625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    position: absolute;
+    top: 2.60rem;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Centré horizontalement */
+    bottom: 7.63rem;
+    white-space: nowrap;
+}
+
+#top_side_menu {
+    width: 11.375rem;
+    height: 8.1875rem;
+    flex-shrink: 0;
+    border-radius: 1.25rem;
+    border-right: 2px solid #ffffff;
+    background: rgba(217, 217, 217, 0.00);
+
+    position: absolute;
+    /* Si nécessaire pour le positionnement */
+    top: 0;
+    left: 0;
+    right: 79.56rem;
+    bottom: 50.31rem;
+}
+
+#logo_watermark {
+    width: 9.5rem;
+    height: 7.0625rem;
+    flex-shrink: 0;
+
+    /* Pour centrer le logo */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#category_section {
+    width: 65.6075rem;
+    height: 45.875rem;
+    flex-shrink: 0;
+    border-radius: 1.25rem;
+    border: 2px solid #ffffff;
+    background: rgba(20, 20, 20, 0.40);
+    box-shadow: 15px -15px 4px 0px rgba(0, 0, 0, 0.16);
+    position: absolute;
+    top: 6.94rem;
+    right: 6.25rem;
+    bottom: 5.69rem;
+    left: 21.5rem;
+
+    /* Flexbox properties */
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+
+    scrollbar-width: none;
+    /* Cacher la barre de défilement pour Firefox */
+    -ms-overflow-style: none;
+    /* Cacher la barre de défilement pour IE et Edge */
+}
+
+#category_section::-webkit-scrollbar {
+    display: none;
+    /* Cacher la barre de défilement pour Chrome, Safari et les navigateurs similaires */
+}
+
+.Category_Selection {
+    width: 15.125rem;
+    height: 12.6875rem;
+    flex-shrink: 0;
+    border-radius: 1.25rem;
+    border-bottom: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    background: rgba(255, 255, 255, 0.20);
+    margin-top: 4.5rem;
+    /* Vertical spacing */
+    margin-left: 5.06rem;
+    /* This spacing ensures the first box starts with the desired spacing from the left */
+}
+
+.category_image {
+    width: 15.125rem;
+    height: 12.6875rem;
+    object-fit: cover;
+    border-radius: 1.25rem;
+    /* Si vous souhaitez conserver le border-radius de Category_Selection pour l'image */
+}
+
+.category_button {
+    width: 15.125rem;
+    height: 1.9375rem;
+    flex-shrink: 0;
+    border-radius: 1.25rem;
+    border: 2px solid #ffffff;
+    background: rgba(217, 217, 217, 0.20);
+    margin-top: 0.94rem;
+
+    display: flex;
+    justify-content: center;
+    /* Centrer horizontalement */
+    align-items: center;
+    /* Centrer verticalement */
+    color: #FFFFFF;
+    font-family: "Bruno", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#settings_button {
+    width: 2.6875rem;
+    height: 2.25rem;
+    flex-shrink: 0;
+    border-radius: 1.25rem;
+    border: 2px solid #ffffff;
+    background: rgba(255, 255, 255, 0.00);
+    position: absolute;
+    top: 1.69rem;
+    right: 2.75rem;
+}
+
+#settings_icon {
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    /* Cette propriété et la suivante sont pour centrer l'icône */
+    justify-content: center;
+    width: 1.66669rem;
+    height: 1.31844rem;
+    flex-shrink: 0;
+}
+
+
+#copyright {
+    color: #FFFFFF;
+    text-align: center;
+    font-family: "Bruno", sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+
+    top: 54.94rem;
+    bottom: 2.5rem;
+    left: 90.94rem;
+}
+
+.fa-regular.fa-copyright {
+    color: #FFFFFF;
+    width: 0.60rem;
+    height: 0.40rem;
+    flex-shrink: 0;
+    position: absolute;
+
+    top: 55.90rem;
+    /* 0.5rem ajouté à la valeur top de #copyright pour l'alignement vertical */
+    left: calc(90.64rem - 0.83331rem - 0.25rem);
+    /* Soustraction de la largeur de l'icône et de l'espace souhaité pour la positionner à gauche du texte */
+}

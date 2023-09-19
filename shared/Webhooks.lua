@@ -1,0 +1,43 @@
+-- Pute your discord webhooks here to have log from wipe
+-- WebhooksLogs = "https://discord.com/api/webhooks/1136007542984691852/PnjjZgKxemzo4pvJwN9MVWTMt2hCN4LFLwoqOzLDre5tC1K1Gw_fVYGKR_xZBzbvMlsE"
+
+-- function sendDiscordLog(xPlayer, targetPlayer)
+--     local targetJob = targetPlayer.getJob()
+--     local date = os.date('%Y-%m-%d')
+--     local time = os.date('%H:%M:%S')
+--     local payload = {
+--         embeds = {
+--             {
+--                 title = "__Informations de Wype__",
+--                 fields = {
+--                     { name = "__**Admin**__", value = " "},
+--                     { name = "Admin ID : ", value = tostring(xPlayer.source)},
+--                     { name = "Admin Name : ", value = xPlayer.getName()},
+--                     { name = "Admin Group : ", value = xPlayer.getGroup()},
+--                     { name = "**―――――――――――――――**", value = " "},
+--                     { name = "__**Player**__", value = " "},
+--                     { name = "Player ID : ", value = tostring(targetPlayer.source)},
+--                     { name = "Player Name : ", value = targetPlayer.getName()},
+--                     { name = "Player Group : ", value = targetPlayer.getGroup()},
+--                     { name = "Player Job : ", value = targetJob.name},
+--                     { name = "Player Grade : ", value = tostring(targetJob.grade_label)},
+--                     { name = "**―――――――――――――――**", value = " "},
+--                     { name = "__**Time**__", value = " "},
+--                     { name = "Date : ", value = date},
+--                     { name = "Time : ", value = time},
+--                 }
+--             }
+--         },
+--         avatar_url = "https://zupimages.net/up/23/31/qpud.png", -- Put a URL here to add a logo on your logs
+--         username = "Logs de Wype"
+--     }
+
+--     PerformHttpRequest(WebhooksLogs, function(statusCode, text, headers)
+--         if statusCode == 200 or 204 then
+--             print("Message envoyé sur Discord avec succès.")
+--         else
+--             print("Erreur lors de l'envoi du message sur Discord. Code de statut :", statusCode)
+--             print(text)
+--         end
+--     end, "POST", json.encode(payload), {["Content-Type"] = "application/json"})
+-- end
